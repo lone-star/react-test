@@ -5,14 +5,21 @@ import {
 
 const INITIAL_STATE = {
   cars: [{
-      make: 'Audi',
-      model: 'A4',
-      color: 'Black'
-    },
-    {
-      make: 'Citroën',
-      model: 'C4',
-      color: 'Brown'
+    make: 'Audi',
+    model: 'A4',
+    color: 'Black'
+  }, {
+    make: 'Audi',
+    model: 'A6',
+    color: 'Black'
+  }, {
+    make: 'Audi',
+    model: 'R8',
+    color: 'Brown'
+  }, {
+    make: 'Citroën',
+    model: 'C4',
+    color: 'Brown'
   }],
   query: ''
 };

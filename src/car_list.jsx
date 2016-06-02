@@ -9,6 +9,10 @@ const CAR_PROPERTY_STYPE = {
   marginLeft: '1rem'
 };
 
+const TITLE_STYLE = {
+  marginLeft: '1rem'
+};
+
 const CarItem = ({car}) => {
   return (
     <div style={CAR_STYLE}>
@@ -19,10 +23,16 @@ const CarItem = ({car}) => {
   );
 }
 
-const CarList = ({cars}) => {
+const queryFilter = (query) => (car) => {
+  return (car.make + ' ' + car.model + ' ' + car.color)
+    .toLowerCase().indexOf(query.toLowerCase()) > -1;
+};
+
+const CarList = ({cars, query}) => {
   return (
     <div>
-      {cars.map((car, key) => <CarItem car={car} key={key} />)}
+      <h4 style={TITLE_STYLE} >Car List</h4>
+      {cars.filter(queryFilter(query)).map((car, key) => <CarItem car={car} key={key} />)}
     </div>
   );
 };
