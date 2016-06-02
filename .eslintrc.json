@@ -1,7 +1,7 @@
 {
   // http://eslint.org/docs/rules/
   "parserOptions": {
-    "ecmaVersion": 6,
+    "ecmaVersion": 7,
     "sourceType": "module",
 
     "ecmaFeatures": {
@@ -19,7 +19,9 @@
       "regexYFlag": false,                        // enable the regular expression y flag
       "templateStrings": false,                   // enable template strings
       "unicodeCodePointEscapes": false,           // enable code point escapes
-      "jsx": true                                // enable JSX
+      "jsx": true,                                // enable JSX
+      "destructuring": true,
+      "spread": true,
     }
   },
 
